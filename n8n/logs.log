@@ -1,0 +1,247 @@
+sudo apt-get update && sudo apt-get upgrade -y
+    2  sudo snap install core; sudo snap refresh core
+    3  sudo snap install --classic certbot
+    4  sudo ln -s /snap/bin/certbot /usr/bin/certbot
+    5  sudo apt install nginx
+    6  sudo ufw app list
+    7  sudo ufw allow 'Nginx HTTP'
+    8  sudo ufw status
+    9  sudo ufw activate
+   10  sudo ufw enable
+   11  sudo ufw status
+   12  sudo ufw list
+   13  sudo ufw app list
+   14  sudo ufw app listsystemctl status nginx
+   15  systemctl status nginx
+   16  curl -4 icanhazip.com
+   17  sudo mkdir -p /var/www/automation.leaftix.com/html
+   18  sudo chown -R $USER:$USER /var/www/automation.leaftix.com/html
+   19  sudo chmod -R 755 /var/www/automation.leaftix.com
+   20  nano /var/www/automation.leaftix.com/html/index.html
+   21  sudo nano /etc/nginx/sites-available/automation.leaftix.com
+   22  sudo ln -s /etc/nginx/sites-available/automation.leaftix.com /etc/nginx/sites-enabled/
+   23  sudo nano /etc/nginx/nginx.conf
+   24  sudo nginx -t
+   25  sudo systemctl restart nginx
+   26  sudo snap install core; sudo snap refresh core
+   27  sudo ln -s /snap/bin/certbot /usr/bin/certbot
+   28  sudo nano /etc/nginx/sites-available/automation.leaftix.com
+   29  sudo nginx -t
+   30  sudo systemctl reload nginx
+   31  sudo ufw status
+   32  sudo ufw allow 'Nginx Full'
+   33  sudo ufw delete allow 'Nginx HTTP'
+   34  sudo ufw status
+   35  sudo ufw delete allow 'Nginx SSH'
+   36  sudo ufw allow ssh
+   37  sudo certbot --nginx -d automation.leaftix.com -d www.automation.leaftix.com
+   38  sudo nano /etc/nginx/sites-available/automation.leaftix.com
+   39  sudo systemctl reload nginx
+   40  sudo certbot --nginx -d automation.leaftix.com -d www.automation.leaftix.com
+   41  sudo systemctl restart nginx
+   42  sudo mkdir -p /var/www/html/.well-known/acme-challenge
+   43  echo "test" | sudo tee /var/www/html/.well-known/acme-challenge/test-file
+   44  sudo chown -R www-data:www-data /var/www/html/.well-known
+   45  sudo chmod -R 755 /var/www/html/.well-known
+   46  echo "test" | sudo tee /var/www/html/.well-known/acme-challenge/test-file
+   47  cat /var/www/html/.well-known/acme-challenge/test-file
+   48  sudo certbot --nginx -d automation.leaftix.com -d www.automation.leaftix.com
+   49  touch renew.sh
+   50  nano renew.sh 
+   51  sudo certbot certonly --manual --preferred-challenges dns --manual-auth-hook /path/to/your-script.sh -d automation.leaftix.com
+   52  pwd
+   53  dir
+   54  sudo certbot certonly --manual --preferred-challenges dns --manual-auth-hook /root/renew.sh -d automation.leaftix.com
+   55  chmod +x renew.sh 
+   56  sudo certbot certonly --manual --preferred-challenges dns --manual-auth-hook /root/renew.sh -d automation.leaftix.com
+   57  sudo systemctl status snap.certbot.renew.service
+   58  sudo certbot renew --dry-run
+   59  sudo certbot certonly --manual --preferred-challenges dns --manual-auth-hook /root/renew.sh -d automation.leaftix.com
+   60  sudo systemctl restart nginx
+   61  sudo certbot --nginx -d example.com -d www.example.com
+   62  sudo certbot --nginx -d automation.leaftix.com -d www.automation.leaftix.com
+   63  sudo certbot --nginx -d example.com -d www.example.com
+   64  sudo certbot --nginx -d automation.leaftix.com -d www.automation.leaftix.com
+   65  sudo systemctl restart nginx
+   66  sudo systemctl stop nginx
+   67  dir
+   68  mkdir n8n
+   69  cd n8n/
+   70  touch install_docker.sh
+   71  nano install_docker.sh 
+   72  bash install_docker.sh 
+   73  sudo usermod -aG docker ${USER}
+   74  su - ${USER}
+   75  sudo apt-get install docker-compose-plugin
+   76  touch docker-compose.yaml
+   77  nano docker-compose.yaml 
+   78  touch .env
+   79  nano .env 
+   80  sudo docker volume create n8n_data
+   81  sudo docker volume create traefik_data
+   82  nano docker-compose.yaml 
+   83  clear
+   84  pwd
+   85  mkdir node
+   86  cd node/
+   87  dir
+   88  mkdir .n8n
+   89  dir
+   90  cd ..
+   91  cd node/
+   92  pwd
+   93  cd ..
+   94  nano docker-compose.yaml 
+   95  docker compose up -d
+   96  docker ps
+   97  sudo docker-compose down
+   98  udo docker-compose down
+   99  docker-compose down
+  100  nano docker-compose.yaml 
+  101  docker compose up -d
+  102  nano docker-compose.yaml 
+  103  docker compose up -d
+  104  docker ps
+  105  dir
+  106  docker ps
+  107  docker compose down
+  108  history
+  109  docker compose up -d
+  110  docker compose down
+  111  docker ps
+  112  docker ps -a
+  113  docker ps
+  114  docker ps -h
+  115  docker ps -a
+  116  docker container ps
+  117  docker container list
+  118  nano docker-compose.yaml 
+  119  docker compose up -d
+  120  docker ps
+  121  dir
+  122  docker compose down
+  123  docker-compose down && docker-compose rm -f
+  124  docker compose down && docker compose rm -f
+  125  docker compose rm -f
+  126  docker-compose pull && docker compose up -d
+  127  docker compose pull && docker compose up -d
+  128  sudo systemctl stop nginx
+  129  sudo systemctl disable nginx
+  130  docker compose pull && docker compose up -d
+  131  docker ps
+  132  dir
+  133  docker compose down && docker compose rm -f
+  134  docker compose pull && docker compose up -d
+  135  docker compose down && docker compose rm -f
+  136  docker images
+  137  dir
+  138  nano docker-compose.yaml 
+  139  docker compose pull && docker compose up -d
+  140  sudo apt-get update && sudo apt-get upgrade -y
+  141  sudo reboot
+  142  sudo apt autoremove
+  143  docker ps
+  144  SIE
+  145  DIR
+  146  dir
+  147  docker compose down && docker compose rm -f
+  148  sudo nano docker-compose.yaml 
+  149  docker images
+  150  docker prune dockers
+  151  docker prune -h
+  152  docker rm --all
+  153  docker rm -h
+  154  docker prune --all
+  155  docker system prune --all
+  156  docker images
+  157  docker compose pull && docker compose up -d
+  158  docker compose down && docker compose rm -f
+  159  docker system prune --all
+  160  sudo nano docker-compose.yaml 
+  161  docker compose pull && docker compose up -d
+  162  docker compose down && docker compose rm -f
+  163  sudo nano docker-compose.yaml 
+  164  docker system prune --all
+  165  docker compose pull && docker compose up -d
+  166  docker compose down && docker compose rm -f
+  167  sudo nano docker-compose.yaml 
+  168  docker system prune --all
+  169  docker compose pull && docker compose up -d
+  170  sudo nano docker-compose.yaml 
+  171  docker compose pull && docker compose up -d
+  172  sudo nano docker-compose.yaml 
+  173  docker compose pull && docker compose up -d
+  174  docker-compose --version
+  175  docker compose
+  176  docker compose --version
+  177  docker compose -v
+  178  docker-compose -v
+  179  sudo apt-get install docker-compose 
+  180  docker-compose -v
+  181  docker-compose
+  182  sudo nano docker-compose.yaml 
+  183  docker-compose pull && docker-compose up -d
+  184  sudo nano docker-compose.yaml 
+  185  docker-compose pull && docker-compose up -d
+  186  docker compose pull && docker compose up -d
+  187  sudo nano docker-compose.yaml 
+  188  docker compose pull && docker compose up -d
+  189  dir
+  190  docker compose down && docker compose rm -f
+  191  nano docker-compose.yaml 
+  192  docker compose pull && docker compose up -d
+  193  docker images
+  194  docker prune image
+  195  docker image prune
+  196  docker container prune
+  197  docker ps
+  198  docker compose down && docker compose rm -f
+  199  nano docker-compose.yaml 
+  200  docker compose pull && docker compose up -d
+  201  docker compose down && docker compose rm -f
+  202  nano docker-compose.yaml 
+  203  docker compose pull && docker compose up -d
+  204  cat
+  205  dir
+  206  cat docker-compose.yaml 
+  207  dir
+  208  dir -s
+  209  dir -ls
+  210  cat n8n/
+  211  cat renew.sh 
+  212  dir -ls
+  213  cd node
+  214  dir
+  215  ls
+  216  cd ..
+  217  cd n8n
+  218  ls
+  219  cd ..
+  220  cd snap/
+  221  dir
+  222  cat certbot/
+  223  cd certbot/
+  224  dir
+  225  cd ..
+  226  dir
+  227  cd ..
+  228  dir
+  229  cat renew.sh 
+  230  dir
+  231  cat docker-compose.yaml 
+  232  dir
+  233  cd node/
+  234  dir
+  235  cd ..
+  236  cd n8n/
+  237  dir
+  238  cat install_docker.sh 
+  239  dir
+  240  cd ..
+  241  dir
+  242  cat renew.sh 
+  243  dir
+  244  cat renew.sh 
+  245  clear
+  246  history
+root@ubuntu-s-1vcpu-1gb-tor1-01:~# 
